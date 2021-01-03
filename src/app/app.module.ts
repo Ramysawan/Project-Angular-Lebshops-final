@@ -25,6 +25,7 @@ import { BeautyComponent } from './components/beauty/beauty.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ItemService } from './services/item.service';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'sports', component: SportsComponent },
   { path: 'beauty', component: BeautyComponent },
   { path: 'liquors', component: LiquorsComponent },
+  { path: 'login', component: LoginComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
@@ -69,7 +71,8 @@ const routes: Routes = [
     BooksComponent,
     BeautyComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
