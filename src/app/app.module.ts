@@ -24,6 +24,7 @@ import { BooksComponent } from './components/books/books.component';
 import { BeautyComponent } from './components/beauty/beauty.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ItemService } from './services/item.service';
 
 
 
@@ -76,7 +77,7 @@ const routes: Routes = [
     AngularFireDatabaseModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
