@@ -4,7 +4,7 @@
   <div class= "row">
     <div class = "col-12 col-sm-6"><br/>
     
-    <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Fashion:</h1>
+    <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Jewellery:</h1>
     
   </div>
   <div class="col-12 col-sm-6 align-self-left">
@@ -15,218 +15,26 @@
   </form></div>
 
 </div><br/>
-<div class="row text-center">
-  <div class="col-lg-3 col-md-6 mb-4">
+
+<div class="row text-center" >
+  <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of items | async">
           <div class="card">
-            <img class="card-img-top" src="assets/images/Products/hoodie1.jpg" alt="">
+            <img class="card-img-top" src={{item.photo}} alt="">
             <div class="card-body">
-              <h4 class="card-title">Hoodie Women</h4>
-              <p class="card-text">Hoodie for women available in all sizes</p>
+              <h4 class="card-title">{{item.title}}</h4>
+              <p class="card-text">{{item.description}}</p>
             </div>
             <div class="card-footer">
-                <h5>149,000.00 LBP</h5>
+                <h5>{{item.price}} LBP</h5>
                 
-                <a href="./buynow">
-                  <button class="button" href="./buynow">Add to Cart</button>
+                <a href="../cart">
+                  <button class="button" href="../cart">Add to Cart</button>
                 </a>
             </div>
           </div>
-        </div>
-
-
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/images/Products/men1.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Leather Jacker</h4>
-              <p class="card-text">Leather jacket for men available in all sizes  </p>
-            </div>
-            <div class="card-footer">
-                <h5>289,000.00 LBP</h5>
-                <a href="./buynow">
-                  <button class="button" href="./buynow">Add to Cart</button>
-                </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/images/Products/jeans1.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Blue Jeans</h4>
-              <p class="card-text">Blue jeans for women available in all sizes </p>
-            </div>
-            <div class="card-footer">
-                <h5>180,000.00 LBP</h5>
-                <!--Add to Cart Modal-->
-                <a href="./buynow">
-                    <button class="button" href="./buynow">Add to Cart</button>
-                </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/images/Products/hoodie2.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Hoodie for Women </h4>
-              <p class="card-text">Hoodie for women available in all sizes</p>
-            </div>
-            <div class="card-footer">
-                <h5>187,000.00 LBP</h5>
-                <!--Add to Cart Modal-->
-                <a href="./buynow">
-                    <button class="button" href="./buynow">Add to Cart</button>
-                </a>
-            </div>
-           
-          </div>
-        </div>
-
-        <div class="row text-center">
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/men2.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Leather Jacket</h4>
-                  <p class="card-text">Leather Jacket for men available in all sizes   </p>
-                </div>
-                <div class="card-footer">
-                    <h5> 355,000.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/jeans2.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Ripped Jeans</h4>
-                  <p class="card-text">Ripped jeans for stylish women available in all sizes</p>
-                </div>
-                <div class="card-footer">
-                    <h5>135,000.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/hoodie3.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Hoodie</h4>
-                  <p class="card-text">Sylish Hoodie for women available in all sizes</p>
-                </div>
-                <div class="card-footer">
-                    <h5>199,000.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/men3.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Army Jacket</h4>
-                  <p class="card-text">Stylish army jacket available for men in all sizes</p>
-                </div>
-                <div class="card-footer">
-                    <h5>340,000.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-               
-              </div>
-            </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/jeans3.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Ripped stylish Jeans</h4>
-                  <p class="card-text">A very stylish new jeans for women available in all sizes</p>
-                </div>
-                <div class="card-footer">
-                    <h5>179,000.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/nikeshoes.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Nike Airforce</h4>
-                  <p class="card-text">Nike Airforce unisex shoes available now in sizes 40-45</p>
-                </div>
-                <div class="card-footer">
-                    <h5>939,000.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/suitmen.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Suit for Men</h4>
-                  <p class="card-text">Black suit for men available in medium and large sizes </p>
-                </div>
-                <div class="card-footer">
-                    <h5>750,000.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card">
-                <img class="card-img-top" src="assets/images/Products/dresswomen.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Formal Dress</h4>
-                  <p class="card-text">A formal dress for women available in all sizes</p>
-                </div>
-                <div class="card-footer">
-                    <h5>490,00.00 LBP</h5>
-                    <!--Add to Cart Modal-->
-                    <a href="./buynow">
-                        <button class="button" href="./buynow">Add to Cart</button>
-                    </a>
-                </div>
-              </div>
-            </div>
-  
-
-</div>
+        </div>    
+          
 <!-- /.row -->
 
-</div></div>
+</div>
+</div>

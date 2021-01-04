@@ -1,44 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemService } from '../../services/item.service';
-import { Item } from '../../models/Item';
 
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-  items: Item[];
-  editState: boolean = false;
-  itemToEdit: Item;
-
-  constructor(private itemService: ItemService) { }
-
-  ngOnInit() {
-    this.itemService.getItems().subscribe(items => {
-      //console.log(items);
-      this.items = items;
-    });
+items: Observable<any[]>;
+  
+  constructor(db: AngularFirestore) {
+    this.items = db.collection('Electronics').valueChanges();
   }
-
-  deleteItem(event, item: Item){
-    this.clearState();
-    this.itemService.deleteItem(item);
+ngOnInit() {
   }
-
-  editItem(event, item: Item){
-    this.editState = true;
-    this.itemToEdit = item;
-  }
-
-  updateItem(item: Item){
-    this.itemService.updateItem(item);
-    this.clearState();
-  }
-
-  clearState(){
-    this.editState = false;
-    this.itemToEdit = null;
-  }
-
 }
