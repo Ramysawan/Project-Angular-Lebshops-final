@@ -18,23 +18,29 @@
 
 <div class="row text-center" >
   <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of items | async">
-          <div class="card">
-            <img class="card-img-top" src={{item.photo}} alt="">
-            <div class="card-body">
-              <h4 class="card-title">{{item.title}}</h4>
-              <p class="card-text">{{item.description}}</p>
-            </div>
-            <div class="card-footer">
-                <h5>{{item.price}} LBP</h5>
-                
-                <a href="../cart">
-                  <button class="button" href="../cart">Add to Cart</button>
-                </a>
-            </div>
-          </div>
-        </div>    
+    <div class="card">
+      <img class="card-img-top shop-item-image" src={{item.photo}} alt="">
+      <div class="card-body shop-items">
+          <div class="shop-item">
+              
+              
+        <h4 class="card-title shop-item-title">{{item.title}}</h4>
+        <p class="card-text">{{item.description}}</p>
+      </div></div>
+      <div class="card-footer">
+        
+          <span class="shop-item-price">{{item.price}} LBP</span>
+          
+          <a href = "../cart"><button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button></a>
+          
+      </div>
+     
+    </div>
+  </div>
           
 <!-- /.row -->
 
 </div>
 </div>
+
+

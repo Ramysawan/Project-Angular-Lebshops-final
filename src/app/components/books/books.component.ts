@@ -11,7 +11,7 @@ export class BooksComponent implements OnInit {
 items: Observable<any[]>;
   
   constructor(db: AngularFirestore) {
-    this.items = db.collection('Electronics').valueChanges();
+    this.items = db.collection('Books').valueChanges();
   }
 ngOnInit() {
   }
